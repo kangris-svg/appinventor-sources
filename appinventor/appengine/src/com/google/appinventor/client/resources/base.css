@@ -1,10 +1,10 @@
-@def l-border-radius        4px;
-@def l-border-radius-md     6px;
-@def l-border-radius-lg     4px;
-@def l-button-padding       10px;
+@def l-border-radius        8px;
+@def l-border-radius-md     12px;
+@def l-border-radius-lg     16px;
+@def l-button-padding       12px 24px;
 
 
-@def f-h1                   'Roboto';
-@def f-h3                   'Poppins', 'Roboto', sans-serif;
-@def f-h4                   'Roboto', sans-serif;
-@def f-button               'Poppins', 'Roboto', sans-serif;
+@def f-h1                   'Inter', 'Roboto', sans-serif;
+@def f-h3                   'Inter', 'Poppins', 'Roboto', sans-serif;
+@def f-h4                   'Inter', 'Roboto', sans-serif;
+@def f-button               'Inter', 'Poppins', 'Roboto', sans-serif;
