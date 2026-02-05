@@ -50,5 +50,9 @@
                     ui:field="switchToBlocks" align="right">
       <ya:SwitchToBlocksEditorAction />
     </ai:ToolbarItem>
+    <ai:ToolbarItem name="switchToCode" caption="Code"
+                    ui:field="switchToCode" align="right">
+      <ya:SwitchToCodeEditorAction />
+    </ai:ToolbarItem>
   </ai:Toolbar>
 </ui:UiBinder>
