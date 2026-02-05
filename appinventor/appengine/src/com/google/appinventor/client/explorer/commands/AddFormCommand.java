@@ -14,6 +14,8 @@ import com.google.appinventor.client.OdeAsyncCallback;
 import com.google.appinventor.client.editor.FileEditor;
 import com.google.appinventor.client.editor.ProjectEditor;
 import com.google.appinventor.client.editor.youngandroid.DesignToolbar.View;
+import com.google.appinventor.client.editor.youngandroid.YaCodeEditor;
+import com.google.appinventor.client.editor.youngandroid.YaProjectEditor;
 import com.google.appinventor.client.explorer.project.Project;
 import com.google.appinventor.client.widgets.LabeledTextBox;
 import com.google.appinventor.client.youngandroid.TextValidators;
@@ -44,7 +46,6 @@ import java.util.Set;
  * @author lizlooney@google.com (Liz Looney)
  */
 public final class AddFormCommand extends ChainableCommand {
-
 
   private static final int MAX_FORM_COUNT = 10;
 
@@ -186,7 +187,7 @@ public final class AddFormCommand extends ChainableCommand {
       }
 
       // Check for reserved words
-      if(TextValidators.isReservedName(newFormName)) {
+      if (TextValidators.isReservedName(newFormName)) {
         Window.alert(MESSAGES.reservedNameError());
         return false;
       }
@@ -205,7 +206,7 @@ public final class AddFormCommand extends ChainableCommand {
      *
      * @param formName the new form name
      */
-    protected void addFormAction(final YoungAndroidProjectNode projectRootNode, 
+    protected void addFormAction(final YoungAndroidProjectNode projectRootNode,
         final String formName) {
       final Ode ode = Ode.getInstance();
       final YoungAndroidPackageNode packageNode = projectRootNode.getPackageNode();
@@ -226,7 +227,7 @@ public final class AddFormCommand extends ChainableCommand {
           project.addNode(packageNode, new YoungAndroidFormNode(formFileId));
           project.addNode(packageNode, new YoungAndroidBlocksNode(blocksFileId));
 
-          // Add the screen to the DesignToolbar and select the new form editor. 
+          // Add the screen to the DesignToolbar and select the new form editor.
           // We need to do this once the form editor and blocks editor have been
           // added to the project editor (after the files are completely loaded).
           //
@@ -237,15 +238,19 @@ public final class AddFormCommand extends ChainableCommand {
           Scheduler.get().scheduleDeferred(new Scheduler.ScheduledCommand() {
             @Override
             public void execute() {
-              ProjectEditor projectEditor = 
-                  ode.getEditorManager().getOpenProjectEditor(project.getProjectId());
+              ProjectEditor projectEditor = ode.getEditorManager().getOpenProjectEditor(project.getProjectId());
               FileEditor formEditor = projectEditor.getFileEditor(formFileId);
               FileEditor blocksEditor = projectEditor.getFileEditor(blocksFileId);
               if (formEditor != null && blocksEditor != null && !ode.screensLocked()) {
                 DesignToolbar designToolbar = Ode.getInstance().getDesignToolbar();
                 long projectId = formEditor.getProjectId();
-                designToolbar.addScreen(projectId, formName, formEditor, 
-                    blocksEditor);
+
+                // Create YaCodeEditor for this form
+                YoungAndroidFormNode formNode = (YoungAndroidFormNode) formEditor.getFileNode();
+                FileEditor codeEditor = new YaCodeEditor((YaProjectEditor) projectEditor, formNode);
+
+                designToolbar.addScreen(projectId, formName, formEditor,
+                    blocksEditor, codeEditor);
                 designToolbar.switchToScreen(projectId, formName, View.DESIGNER);
                 executeNextCommand(projectRootNode);
               } else {
@@ -264,7 +269,8 @@ public final class AddFormCommand extends ChainableCommand {
         }
       };
 
-      // Create the new form on the backend. The backend will create the form (.scm) and blocks
+      // Create the new form on the backend. The backend will create the form (.scm)
+      // and blocks
       // (.blk) files.
       ode.getProjectService().addFile(projectRootNode.getProjectId(), formFileId, callback);
     }

@@ -57,11 +57,13 @@ public class DesignToolbar extends Toolbar {
     public final String screenName;
     public final FileEditor designerEditor;
     public final FileEditor blocksEditor;
+    public final FileEditor codeEditor;
 
-    public EditorPair(String name, FileEditor designerEditor, FileEditor blocksEditor) {
+    public EditorPair(String name, FileEditor designerEditor, FileEditor blocksEditor, FileEditor codeEditor) {
       this.screenName = name;
       this.designerEditor = designerEditor;
       this.blocksEditor = blocksEditor;
+      this.codeEditor = codeEditor;
     }
   }
 

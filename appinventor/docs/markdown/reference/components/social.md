@@ -44,7 +44,7 @@ A button that, when clicked on, displays a list of the contacts to choose among.
 
 {:id="ContactPicker.BackgroundColor" .color} *BackgroundColor*
 : Specifies the `ContactPicker`'s background color as an alpha-red-green-blue
- integer.  If an [`Image`](#ContactPicker.Image) has been set, the color
+ integer. If an [`Image`](#ContactPicker.Image) has been set, the color
  change will not be visible until the [`Image`](#ContactPicker.Image) is removed.
 
 {:id="ContactPicker.ContactName" .text .ro .bo} *ContactName*
@@ -72,7 +72,8 @@ A button that, when clicked on, displays a list of the contacts to choose among.
  Some fonts do not support italic.
 
 {:id="ContactPicker.FontSize" .number} *FontSize*
-: Specifies the text font size of the `ContactPicker`, measured in sp(scale-independent pixels).
+: Specifies the text font size of the `ContactPicker`, measured in
+ sp(scale-independent pixels).
 
 {:id="ContactPicker.FontTypeface" .text .do} *FontTypeface*
 : Specifies the text font face of the `ContactPicker` as default, serif, sans
@@ -106,12 +107,15 @@ A button that, when clicked on, displays a list of the contacts to choose among.
  used to retrieve the contact's photo and other fields.
 
 {:id="ContactPicker.Shape" .number .do} *Shape*
-: Specifies the shape of the `ContactPicker`. The valid values for this property are `0` (default),
- `1` (rounded), `2` (rectangle), and `3` (oval). The `Shape` will not be visible if an
+: Specifies the shape of the `ContactPicker`. The valid values for this property are
+ `0` (default),
+ `1` (rounded), `2` (rectangle), and `3` (oval). The `Shape` will not be
+ visible if an
  [`Image`](#ContactPicker.Image) is used.
 
 {:id="ContactPicker.ShowFeedback" .boolean} *ShowFeedback*
-: Specifies if a visual feedback should be shown when a `ContactPicker` with an assigned
+: Specifies if a visual feedback should be shown when a `ContactPicker` with an
+ assigned
  [`Image`](#ContactPicker.Image) is pressed.
 
 {:id="ContactPicker.Text" .text} *Text*
@@ -388,7 +392,7 @@ A button that, when clicked on, displays a list of the contacts' phone numbers t
 
 {:id="PhoneNumberPicker.BackgroundColor" .color} *BackgroundColor*
 : Specifies the `PhoneNumberPicker`'s background color as an alpha-red-green-blue
- integer.  If an [`Image`](#PhoneNumberPicker.Image) has been set, the color
+ integer. If an [`Image`](#PhoneNumberPicker.Image) has been set, the color
  change will not be visible until the [`Image`](#PhoneNumberPicker.Image) is removed.
 
 {:id="PhoneNumberPicker.ContactName" .text .ro .bo} *ContactName*
@@ -416,7 +420,8 @@ A button that, when clicked on, displays a list of the contacts' phone numbers t
  Some fonts do not support italic.
 
 {:id="PhoneNumberPicker.FontSize" .number} *FontSize*
-: Specifies the text font size of the `PhoneNumberPicker`, measured in sp(scale-independent pixels).
+: Specifies the text font size of the `PhoneNumberPicker`, measured in
+ sp(scale-independent pixels).
 
 {:id="PhoneNumberPicker.FontTypeface" .text .do} *FontTypeface*
 : Specifies the text font face of the `PhoneNumberPicker` as default, serif, sans
@@ -450,12 +455,15 @@ A button that, when clicked on, displays a list of the contacts' phone numbers t
  used to retrieve the contact's photo and other fields.
 
 {:id="PhoneNumberPicker.Shape" .number .do} *Shape*
-: Specifies the shape of the `PhoneNumberPicker`. The valid values for this property are `0` (default),
- `1` (rounded), `2` (rectangle), and `3` (oval). The `Shape` will not be visible if an
+: Specifies the shape of the `PhoneNumberPicker`. The valid values for this property are
+ `0` (default),
+ `1` (rounded), `2` (rectangle), and `3` (oval). The `Shape` will not be
+ visible if an
  [`Image`](#PhoneNumberPicker.Image) is used.
 
 {:id="PhoneNumberPicker.ShowFeedback" .boolean} *ShowFeedback*
-: Specifies if a visual feedback should be shown when a `PhoneNumberPicker` with an assigned
+: Specifies if a visual feedback should be shown when a `PhoneNumberPicker` with an
+ assigned
  [`Image`](#PhoneNumberPicker.Image) is pressed.
 
 {:id="PhoneNumberPicker.Text" .text} *Text*

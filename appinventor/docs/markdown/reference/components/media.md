@@ -110,7 +110,7 @@ The <code>FilePicker</code> component is a button-like component that when click
 
 {:id="FilePicker.BackgroundColor" .color} *BackgroundColor*
 : Specifies the `FilePicker`'s background color as an alpha-red-green-blue
- integer.  If an [`Image`](#FilePicker.Image) has been set, the color
+ integer. If an [`Image`](#FilePicker.Image) has been set, the color
  change will not be visible until the [`Image`](#FilePicker.Image) is removed.
 
 {:id="FilePicker.Enabled" .boolean} *Enabled*
@@ -125,7 +125,8 @@ The <code>FilePicker</code> component is a button-like component that when click
  Some fonts do not support italic.
 
 {:id="FilePicker.FontSize" .number} *FontSize*
-: Specifies the text font size of the `FilePicker`, measured in sp(scale-independent pixels).
+: Specifies the text font size of the `FilePicker`, measured in
+ sp(scale-independent pixels).
 
 {:id="FilePicker.FontTypeface" .text .do} *FontTypeface*
 : Specifies the text font face of the `FilePicker` as default, serif, sans
@@ -154,12 +155,15 @@ The <code>FilePicker</code> component is a button-like component that when click
 : Returns the selected file, possibly as a content URI.
 
 {:id="FilePicker.Shape" .number .do} *Shape*
-: Specifies the shape of the `FilePicker`. The valid values for this property are `0` (default),
- `1` (rounded), `2` (rectangle), and `3` (oval). The `Shape` will not be visible if an
+: Specifies the shape of the `FilePicker`. The valid values for this property are
+ `0` (default),
+ `1` (rounded), `2` (rectangle), and `3` (oval). The `Shape` will not be
+ visible if an
  [`Image`](#FilePicker.Image) is used.
 
 {:id="FilePicker.ShowFeedback" .boolean} *ShowFeedback*
-: Specifies if a visual feedback should be shown when a `FilePicker` with an assigned
+: Specifies if a visual feedback should be shown when a `FilePicker` with an
+ assigned
  [`Image`](#FilePicker.Image) is pressed.
 
 {:id="FilePicker.Text" .text} *Text*
@@ -240,7 +244,7 @@ A special-purpose button. When the user taps an `ImagePicker`, the device's imag
 
 {:id="ImagePicker.BackgroundColor" .color} *BackgroundColor*
 : Specifies the `ImagePicker`'s background color as an alpha-red-green-blue
- integer.  If an [`Image`](#ImagePicker.Image) has been set, the color
+ integer. If an [`Image`](#ImagePicker.Image) has been set, the color
  change will not be visible until the [`Image`](#ImagePicker.Image) is removed.
 
 {:id="ImagePicker.Enabled" .boolean} *Enabled*
@@ -255,7 +259,8 @@ A special-purpose button. When the user taps an `ImagePicker`, the device's imag
  Some fonts do not support italic.
 
 {:id="ImagePicker.FontSize" .number} *FontSize*
-: Specifies the text font size of the `ImagePicker`, measured in sp(scale-independent pixels).
+: Specifies the text font size of the `ImagePicker`, measured in
+ sp(scale-independent pixels).
 
 {:id="ImagePicker.FontTypeface" .text .do} *FontTypeface*
 : Specifies the text font face of the `ImagePicker` as default, serif, sans
@@ -281,12 +286,15 @@ A special-purpose button. When the user taps an `ImagePicker`, the device's imag
 : Path to the file containing the image that was selected.
 
 {:id="ImagePicker.Shape" .number .do} *Shape*
-: Specifies the shape of the `ImagePicker`. The valid values for this property are `0` (default),
- `1` (rounded), `2` (rectangle), and `3` (oval). The `Shape` will not be visible if an
+: Specifies the shape of the `ImagePicker`. The valid values for this property are
+ `0` (default),
+ `1` (rounded), `2` (rectangle), and `3` (oval). The `Shape` will not be
+ visible if an
  [`Image`](#ImagePicker.Image) is used.
 
 {:id="ImagePicker.ShowFeedback" .boolean} *ShowFeedback*
-: Specifies if a visual feedback should be shown when a `ImagePicker` with an assigned
+: Specifies if a visual feedback should be shown when a `ImagePicker` with an
+ assigned
  [`Image`](#ImagePicker.Image) is pressed.
 
 {:id="ImagePicker.Text" .text} *Text*

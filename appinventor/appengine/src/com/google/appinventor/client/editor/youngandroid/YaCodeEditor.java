@@ -8,7 +8,7 @@ package com.google.appinventor.client.editor.youngandroid;
 import com.google.appinventor.client.editor.FileEditor;
 import com.google.appinventor.client.editor.youngandroid.YaBlocksEditor;
 import com.google.appinventor.client.editor.simple.SimpleComponentDatabase;
-import com.google.appinventor.shared.rpc.project.ProjectNode;
+import com.google.appinventor.shared.rpc.project.youngandroid.YoungAndroidFormNode;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
@@ -21,7 +21,7 @@ public final class YaCodeEditor extends FileEditor {
     private final TextArea codeArea;
     private final VerticalPanel panel;
 
-    public YaCodeEditor(YaProjectEditor projectEditor, ProjectNode formNode) {
+    public YaCodeEditor(YaProjectEditor projectEditor, YoungAndroidFormNode formNode) {
         super(projectEditor, formNode);
 
         panel = new VerticalPanel();
@@ -35,6 +35,11 @@ public final class YaCodeEditor extends FileEditor {
         panel.add(codeArea);
 
         initWidget(panel);
+    }
+
+    @Override
+    public String getEntityName() {
+        return ((YoungAndroidFormNode) getFileNode()).getFormName();
     }
 
     @Override
