@@ -50,7 +50,8 @@ public class AppInventorCompatActivity extends Activity implements AppCompatCall
     CLASSIC,
     DEVICE_DEFAULT,
     BLACK_TITLE_TEXT,
-    DARK
+    DARK,
+    MODERN
   }
 
   private static final String LOG_TAG = AppInventorCompatActivity.class.getSimpleName();
@@ -371,10 +372,16 @@ public class AppInventorCompatActivity extends Activity implements AppCompatCall
           WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView()).setAppearanceLightStatusBars(true);
         }
         break;
-      case DARK:
+    case DARK:
         setTheme(android.R.style.Theme_DeviceDefault_NoActionBar);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
           WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView()).setAppearanceLightStatusBars(false);
+        }
+        break;
+      case MODERN:
+        setTheme(android.R.style.Theme_DeviceDefault_Light_NoActionBar);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+          WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView()).setAppearanceLightStatusBars(true);
         }
         break;
     }
