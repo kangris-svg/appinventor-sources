@@ -7,8 +7,10 @@ package com.google.appinventor.client.editor.youngandroid;
 
 import com.google.appinventor.client.editor.FileEditor;
 import com.google.appinventor.client.editor.youngandroid.YaBlocksEditor;
-import com.google.appinventor.client.editor.simple.SimpleComponentDatabase;
+import com.google.appinventor.client.editor.simple.palette.DropTargetProvider;
+import com.google.appinventor.client.widgets.dnd.DropTarget;
 import com.google.appinventor.shared.rpc.project.youngandroid.YoungAndroidFormNode;
+import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
@@ -82,7 +84,32 @@ public final class YaCodeEditor extends FileEditor {
     }
 
     @Override
+    public String getRawFileContent() {
+        // Return the current code content in the text area
+        return codeArea.getText();
+    }
+
+    @Override
+    public void loadFile(Command afterFileLoaded) {
+        // For now, there is no separate file loading for the code editor.
+        // The code is updated from the Blocks editor.
+        if (afterFileLoaded != null) {
+            afterFileLoaded.execute();
+        }
+    }
+
+    @Override
     public String getEditorType() {
         return EDITOR_TYPE;
+    }
+
+    @Override
+    public DropTargetProvider getDropTargetProvider() {
+        return new DropTargetProvider() {
+            @Override
+            public DropTarget[] getDropTargets() {
+                return new DropTarget[0];
+            }
+        };
     }
 }

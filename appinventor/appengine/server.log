@@ -1,0 +1,2 @@
+Error: Could not find or load main class com.google.appinventor.server.StartAppInventorServer
+Caused by: java.lang.ClassNotFoundException: com.google.appinventor.server.StartAppInventorServer
