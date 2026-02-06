@@ -58,8 +58,12 @@
       <ya:SwitchToFormEditorAction/>
     </ai:ToolbarItem>
     <ai:ToolbarItem name="switchToBlocks" caption="{messages.switchToBlocksEditorButton}"
-                    ui:field="switchToBlocks" align="right" styleName="ode-ProjectListButton bright primary">
+                    ui:field="switchToBlocks" align="right" styleName="ode-ProjectListButton bcenter primary">
       <ya:SwitchToBlocksEditorAction/>
+    </ai:ToolbarItem>
+    <ai:ToolbarItem name="switchToCode" caption="Code"
+                    ui:field="switchToCode" align="right" styleName="ode-ProjectListButton bright primary">
+      <ya:SwitchToCodeEditorAction/>
     </ai:ToolbarItem>
   </ai:Toolbar>
 </ui:UiBinder>
