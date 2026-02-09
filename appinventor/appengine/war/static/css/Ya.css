@@ -6,6 +6,9 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+/* Import Tailwind CSS - Modern CSS Framework */
+@import url('tailwind.css');
+
 /*
 Droid Sans has a bug in the size of its descenders:
 they get cut off in Windows.

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import existing App Inventor CSS variables and styles */
+@import url('../appengine/src/com/google/appinventor/client/style/neo/neo.css');
+
+/* Custom Tailwind utilities for App Inventor */
+@layer utilities {
+  .ode-button {
+    @apply px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:shadow-sm;
+  }
+  
+  .ode-button-primary {
+    @apply bg-ai-green-500 hover:bg-ai-green-600 text-white hover:shadow-ai;
+  }
+  
+  .ode-button-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300 hover:border-gray-400;
+  }
+  
+  .ode-button-danger {
+    @apply bg-red-500 hover:bg-red-600 text-white hover:shadow-sm;
+  }
+  
+  .ode-panel {
+    @apply bg-white rounded-lg border border-gray-200 shadow-ai;
+  }
+  
+  .ode-toolbar {
+    @apply bg-white border-b border-gray-200 px-4 py-2;
+  }
+  
+  .ode-form-input {
+    @apply border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ai-green-400 focus:border-transparent transition-all duration-200;
+  }
+
+  /* Modern TopPanel styles */
+  .ode-toppanel-modern {
+    @apply bg-white border-b border-gray-200 px-4 py-3 shadow-sm;
+  }
+
+  .ode-toppanel-button-modern {
+    @apply px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 hover:shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ai-green-400 focus:ring-offset-2;
+  }
+
+  .ode-toppanel-button-primary-modern {
+    @apply px-4 py-2 text-sm font-medium text-white bg-ai-green-500 border border-ai-green-500 rounded-md hover:bg-ai-green-600 hover:border-ai-green-600 hover:shadow-ai transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ai-green-400 focus:ring-offset-2;
+  }
+
+  .ode-toppanel-logo-modern {
+    @apply h-9 w-auto transition-transform duration-200 hover:scale-105;
+  }
+
+  .ode-toppanel-account-modern {
+    @apply flex items-center space-x-2 ml-4;
+  }
+
+  .ode-toppanel-links-modern {
+    @apply flex items-center space-x-2;
+  }
+}

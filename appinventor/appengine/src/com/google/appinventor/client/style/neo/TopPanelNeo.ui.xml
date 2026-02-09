@@ -11,17 +11,17 @@
              ui:generateLocales="default">
   <ui:with field="messages" type="com.google.appinventor.client.OdeMessages"/>
   <ui:with field="config" type="com.google.appinventor.client.OdeMessages"/>
-  <g:FlowPanel styleName="ode-TopPanel">
+  <g:FlowPanel styleName="ode-TopPanel ode-toppanel-modern">
     <g:HTML>
-      <img srcset="" class="ode-Logo" ui:field="logo" height="37px"/>
+      <img srcset="" class="ode-Logo ode-toppanel-logo-modern" ui:field="logo" height="37px"/>
     </g:HTML>
     <neo:TopToolbarNeo ui:field="topToolbar"/>
     <g:FlowPanel ui:field="rightPanel">
-      <g:FlowPanel styleName="ode-TopPanelAccount">
+      <g:FlowPanel styleName="ode-TopPanelAccount ode-toppanel-account-modern">
         <g:Label text="{messages.readOnlyMode}" styleName="ode-TopPanelWarningLabel"
                  ui:field="readOnly"/>
         <!-- Help Menu -->
-        <ai:DropDownButton name="Help" caption="{messages.helpTabName}" styleName="ode-TopPanelButton"
+        <ai:DropDownButton name="Help" caption="{messages.helpTabName}" styleName="ode-TopPanelButton ode-toppanel-button-modern"
                            ui:field="helpDropDown" align="right" icon="help">
           <ai:DropDownItem name="About" caption="{messages.aboutMenuItem}">
             <actions:AboutAction/>
@@ -59,10 +59,10 @@
           </ai:DropDownItem>
         </ai:DropDownButton>
 
-        <g:FlowPanel styleName="ode-TopPanelLinks" ui:field="links">
-          <ai:DropDownButton styleName="ode-TopPanelButton" rightAlign="true"
+        <g:FlowPanel styleName="ode-TopPanelLinks ode-toppanel-links-modern" ui:field="links">
+          <ai:DropDownButton styleName="ode-TopPanelButton ode-toppanel-button-modern" rightAlign="true"
                              ui:field="languageDropDown" icon="language"/>
-          <ai:DropDownButton styleName="ode-TopPanelButton" rightAlign="true"
+          <ai:DropDownButton styleName="ode-TopPanelButton ode-toppanel-button-primary-modern" rightAlign="true"
                              ui:field="accountButton" icon="logout">
             <ai:DropDownItem name="Signout" caption="{messages.signOutLink}">
               <actions:SignOutAction/>
